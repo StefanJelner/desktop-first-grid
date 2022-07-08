@@ -1,0 +1,22 @@
+{
+  "name": "desktop-first-grid",
+  "version": "0.0.1",
+  "description": "A very simple flexbox based desktop first grid which uses bootstraps class naming scheme",
+  "scripts": {
+    "start": "sass --no-source-map test.scss test.css"
+  },
+  "keywords": [
+    "desktop",
+    "first",
+    "grid",
+    "bootstrap",
+    "sass",
+    "scss",
+    "css"
+  ],
+  "author": "Stefan Jelner",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
+}
