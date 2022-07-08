@@ -3,6 +3,9 @@
 @use 'sass:math';
 @use 'sass:meta';
 
+/// Returns a vendor prefix if a vendor config is given, otherwise an empty string
+/// 
+/// @return vendor prefix if a vendor config is given, otherwise an empty string
 @function vendor() {
     @if meta.type-of($vendor) == string and $vendor != '' {
         @return $vendor + '-';
@@ -74,6 +77,10 @@
     @return calc(-1 * $value);
 }
 
+/// Returns a media query for a given breakpoint value
+/// 
+/// @param {String} breakpoint
+/// @return media query
 @mixin media-breakpoint-down($breakpoint) {
     @if map.has-key($grid-breakpoints, $breakpoint) {
         @media screen and (max-width: #{map.get($grid-breakpoints, $breakpoint)}) {
@@ -82,6 +89,9 @@
     }
 }
 
+/// Creates CSS which can be then consumed with a JavaScript service to watch breakpoint changes
+///
+/// @output CSS which can be then consumed with a JavaScript service to watch breakpoint changes
 @mixin add-breakpoint-change {
     body {
         &::before {
@@ -97,6 +107,9 @@
     }
 }
 
+/// Creates display related classes
+/// 
+/// @output display related classes
 @mixin add-display-classes {
     @each $display in $displays {
         .#{vendor()}d-#{$display} {
@@ -115,6 +128,9 @@
     }
 }
 
+/// Creates flexbox related classes
+/// 
+/// @output flexbox related classes
 @mixin add-flex-classes {
     .#{vendor()}flex {
         &-row {
@@ -165,9 +181,8 @@
             }
         }
     
-        // breaking to a new row in a flexbox with .flex-wrap
+        // breaking to a new row in a flexbox with .flex-break
         // see https://tobiasahlin.com/blog/flexbox-break-to-new-row/
-    
         &-break {
             flex-basis: 100%;
             height: 0;
@@ -319,6 +334,14 @@
                         flex-wrap: wrap-reverse !important;
                     }
                 }
+
+                // breaking to a new row in a flexbox with .flex-break
+                // see https://tobiasahlin.com/blog/flexbox-break-to-new-row/
+                &-break {
+                    flex-basis: 100%;
+                    height: 0;
+                    overflow: hidden;
+                }
             }
     
             .#{vendor()}justify-content-#{$key} {
@@ -418,6 +441,9 @@
     }
 }
 
+/// Creates margin and padding related classes
+/// 
+/// @output margin and padding related classes
 @mixin add-spacing-classes {
     @for $i from 0 through $spacing-iterations {
         .#{vendor()}mrg {
@@ -648,6 +674,9 @@
     }
 }
 
+/// Creates flexbox based grid related classes
+/// 
+/// @output flexbox based grid related classes
 @mixin add-grid-classes {
     .#{vendor()}container {
         &,
