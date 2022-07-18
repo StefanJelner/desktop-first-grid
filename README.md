@@ -1,6 +1,6 @@
 # Desktop first grid
 
-A grid system provides the ability to present, align and order boxes of content - related to as columns in the following text - according to a predefined grid. The adavantage to "pixel perfect" approaches is, that content "snaps in" more losely and therefore discussion about single pixels can be avoided. Besides it is easier to present content in different orders and positions according to different breakpoints, respectively screen widths and orientations.
+A grid system provides the ability to present, align and order boxes of content - related to as columns in the following text - according to a predefined grid. The adavantage to "pixel perfect" approaches is, that content "snaps in" more losely and therefore discussions about single pixels can be avoided. Besides it is easier to present content in different orders and positions according to different breakpoints, respectively screen widths and orientations.
 
 Nowaydays popular grid systems follow the mobile first approach, which means that the whole design is based on mobile devices and then from those very small screen resolutions things are rearranged and repositioned from smaller to bigger widths. This approach usually has the advantage that UIs are more tidied up and space is used more efficiently, because if the design is done the other way around and designed for desktop devices and from bigger to smaller screens, the tendency to "bloat" the UI and then running into trouble presenting things on smaller devices is higher; in the worst case, features are not available on smaller devices, which makes parts of the website or application unaccessible to smaller devices.
 
@@ -51,7 +51,7 @@ $grid-columns: 12;
 
 ### `$grid-gutter-width`
 
-The grid gutter width is the width of the gap (respectively margin) between two grid columns. It is also possible to have rows without gaps between the columns, which will be shown later. Additionally with the spacing classes it is possible to override the gap, which will also be shown later.
+The grid gutter width is the width of the gap (respectively padding) between two grid columns inside of the column itself. It is also possible to have rows without gaps between the columns, which will be shown later. Additionally with the spacing classes it is possible to override the gap, which will also be shown later.
 
 Example:
 
