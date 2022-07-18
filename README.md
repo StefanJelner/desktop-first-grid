@@ -6,6 +6,14 @@ Nowaydays popular grid systems follow the mobile first approach, which means tha
 
 It all depends on the purpose of the website and application and on the target audience. If you are dealing with a big application which will mainly be used in desktop scenarios by professionals, then the desktop first approach might be the better and more time and cost effective way. This is the reason why this desktop first grid exists. It tries to provide the bare necessities for using a grid in a desktop first application. This means: breakpoints, orientation, dimensions, offsets, margins, paddings, ordering, alignment, line breaking and display.
 
+## Importing and usage
+
+```scss
+// configuration comes here...
+
+@import 'desktop-first-grid/desktop-first-grid';
+```
+
 ## Configuration
 
 ### `$vendor`
@@ -205,6 +213,8 @@ Flex classes work analogous to the real `flex` related properties and values in 
 ### `add-flex-classes`
 
 This mixin creates the display classes.
+
+Example:
 
 Sass:
 ```scss
@@ -464,7 +474,7 @@ $vendor: '';
 
 ## `negative`
 
-this function takes a literal CSS value and returns a `calc()` expression which negates the literal CSS value.
+This function takes a literal CSS value and returns a `calc()` expression which negates the literal CSS value.
 
 Example:
 
