@@ -379,7 +379,7 @@ This shows 3 columns with the same `width` of `33.33%`. Additionally `container-
 HTML:
 ```html
 <div class="container">
-    <div class="row">
+    <div class="row flex-wrap">
         <div class="col-4 col-md-6">Content 1</div>
         <div class="col-4 col-md-6">Content 2</div>
         <div class="d-none d-md-block flex-md-break"></div>
@@ -388,7 +388,7 @@ HTML:
 </div>
 ```
 
-This shows 3 columns with the same `width` of `33.33%` and below the `md` breakpoint (`992px` in our example configuration) it shows a row with 2 columns with a `width` of `50%` and a row with 1 column with a `width` of `100%`.
+This shows 3 columns with the same `width` of `33.33%` and below the `md` breakpoint (`992px` in our example configuration) it shows a row with 2 columns with a `width` of `50%` and a row with 1 column with a `width` of `100%`. It is important to activate flex wrapping with the class `flex-wrap`.
 
 HTML:
 ```html
