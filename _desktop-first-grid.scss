@@ -713,11 +713,11 @@
     
     .#{vendor()}col,
     [class*='#{vendor()}col-'] {
+        box-sizing: border-box;
         padding: {
             left: calc(var(--#{vendor()}grid-gutter-width) / 2) !important;
             right: calc(var(--#{vendor()}grid-gutter-width) / 2) !important;
         }
-    
         position: relative !important;
     
         .#{vendor()}row.#{vendor()}no-gutters > & {

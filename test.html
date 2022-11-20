@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Desktop first grid - Test</title>
+        <link rel="stylesheet" href="./test.css" />
+        <style type="text/css">
+            body {
+                font-family: monospace;
+                font-size: 16px;
+                line-height: 16px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .row {
+                background-color: #888;
+            }
+
+            .col,
+            [class*='col-'] {
+                background-clip: content-box;
+                background-color: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row mrg-b-4">
+                <div class="col"><div class="pad-2">col</div></div>
+                <div class="col"><div class="pad-2">col</div></div>
+                <div class="col"><div class="pad-2">col</div></div>
+            </div>
+            <div class="row mrg-b-4">
+                <div class="col-4 col-md-6 col-xs-8"><div class="pad-2">col-4 col-md-6 col-xs-8</div></div>
+                <div class="col-4 col-md-3 col-xs-2"><div class="pad-2">col-4 col-md-3 col-xs-2</div></div>
+                <div class="col-4 col-md-3 col-xs-2"><div class="pad-2">col-4 col-md-3 col-xs-2</div></div>
+            </div>
+            <div class="row mrg-b-4">
+                <div class="col-4 col-md-8 col-xs-12"><div class="pad-2">col-4 col-md-8 col-xs-12</div></div>
+                <div class="col-4 d-xs-none"><div class="pad-2">col-4 d-xs-none</div></div>
+                <div class="col-4 d-md-none"><div class="pad-2">col-4 d-md-none</div></div>
+            </div>
+            <div class="row flex-wrap mrg-b-4">
+                <div class="col-4 col-md-6 col-xs-12"><div class="pad-2">col-4 col-md-8 col-xs-12</div></div>
+                <div class="flex-break d-none d-xs-block mrg-b-4"></div>
+                <div class="col-4 col-md-6 col-xs-12"><div class="pad-2">col-4 col-md-8 col-xs-12</div></div>
+                <div class="flex-break d-none d-md-block mrg-b-4"></div>
+                <div class="col-4 col-md-12 col-xs-12"><div class="pad-2">col-4 col-md-8 col-xs-12</div></div>
+            </div>
+        </div>
+    </body>
+</html>
